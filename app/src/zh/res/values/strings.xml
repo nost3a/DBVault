@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">库钥</string>
+    <string name="app_name_en">DBVault</string>
+
+    <!-- 首页 / home -->
+    <string name="action_open_file">打开文件</string>
+    <string name="action_new_conn">新建连接</string>
+    <string name="tab_local">本地文件</string>
+    <string name="tab_remote">远程连接</string>
+    <string name="empty_local">用右上角「打开文件」选择 .db / .sqlite / .sql</string>
+    <string name="empty_remote">用右上角「新建连接」添加服务器</string>
+    <string name="empty_none">没有记录</string>
+    <string name="menu_remove">从列表移除</string>
+    <string name="menu_edit">编辑</string>
+    <string name="menu_delete">删除</string>
+    <string name="confirm_delete_conn">删除这条连接？密码一并清除。</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_close">关闭</string>
+    <string name="toast_permission_lost">访问权限已失效，请重新选择文件</string>
+    <string name="title_open_failed">打开失败</string>
+    <string name="title_connect_failed">连接失败</string>
+    <string name="status_files">%1$d 个文件</string>
+    <string name="status_conns">%1$d 条连接</string>
+    <string name="busy_reading">读取中…</string>
+    <string name="busy_connecting">正在连接 %1$s…</string>
+    <string name="no_file_picker">系统里没有可用的文件选择器</string>
+
+    <!-- 工作区 / explorer -->
+    <string name="label_objects">OBJECTS</string>
+    <string name="placeholder_pick_table">左侧选择一张表</string>
+    <string name="toast_redis_edit">Redis 请在 SQL / 命令台里改</string>
+    <string name="toast_readonly">只读会话，不能修改</string>
+    <string name="toast_no_condition">定位不到这一行</string>
+    <string name="toast_first_page">已经是第一页</string>
+    <string name="toast_format_readonly">这个格式只能看，不能改</string>
+    <string name="action_write">写入</string>
+    <string name="action_continue">继续</string>
+    <string name="action_null">NULL</string>
+    <string name="edit_cell_null">NULL</string>
+    <string name="no_pk_title">这张表没有主键</string>
+    <string name="no_pk_message">将按整行内容定位。存在完全相同的行时，会一起被改掉。</string>
+    <string name="edit_failed">写入失败</string>
+    <string name="status_loading_objects">读取对象列表…</string>
+    <string name="status_reading_table">读取 %1$s …</string>
+    <string name="status_read_failed">读取失败：%1$s</string>
+    <string name="status_objects_failed">对象列表读取失败：%1$s</string>
+    <string name="status_columns_missing">没有可读的列</string>
+    <string name="status_affected">已影响 %1$d 行</string>
+    <string name="status_tables">%1$d 张表</string>
+    <string name="status_views">%1$d 个视图</string>
+
+    <!-- 连接表单 / connection editor -->
+    <string name="title_new_conn">新建连接</string>
+    <string name="title_edit_conn">编辑连接</string>
+    <string name="action_save">保存</string>
+    <string name="action_connect">连接</string>
+    <string name="label_alias">ALIAS</string>
+    <string name="label_host">HOST</string>
+    <string name="label_port">PORT</string>
+    <string name="label_user">USER</string>
+    <string name="label_password">PASSWORD</string>
+    <string name="label_database">DATABASE</string>
+    <string name="label_database_redis">DATABASE（库号）</string>
+    <string name="label_schema">SCHEMA</string>
+    <string name="label_ssl">SSL</string>
+    <string name="action_show_pwd">显示</string>
+    <string name="action_hide_pwd">隐藏</string>
+    <string name="note_mysql">port 3306\n账号需要对目标库有读写权限\n库名留空则用连接的默认库</string>
+    <string name="note_pg">port 5432\nDATABASE 必填；SCHEMA 留空按 public\n库对象多时可以填 schema 收窄范围</string>
+    <string name="note_mssql">port 1433\n服务器要开 TCP/IP 和 SQL 身份验证\nSCHEMA 留空按 dbo</string>
+    <string name="note_redis">port 6379\nDATABASE 填库号（0-15），PASSWORD 填 AUTH 密码\nUSER 在 Redis 里不用填</string>
+    <string name="toast_need_host">先填主机名或 IP</string>
+    <string name="toast_need_db">先填数据库名</string>
+    <string name="toast_need_user">先填用户名</string>
+    <string name="toast_connecting">连接中…</string>
+    <string name="toast_connected">连接成功\n%1$s</string>
+    <string name="toast_saved">已保存</string>
+    <string name="hint_alias_mysql">prod-main</string>
+    <string name="hint_alias_pg">pg-main</string>
+    <string name="hint_alias_redis">cache</string>
+    <string name="hint_host">10.0.0.5</string>
+    <string name="hint_user">root</string>
+    <string name="hint_db_redis">0</string>
+    <string name="hint_db_pg">postgres</string>
+    <string name="hint_db_default">test</string>
+    <string name="hint_schema_pg">public</string>
+    <string name="hint_schema_mssql">dbo</string>
+
+    <!-- SQL 控制台 / console -->
+    <string name="action_run">运行</string>
+    <string name="action_clear_sql">清空语句</string>
+    <string name="action_clear_result">清空结果</string>
+    <string name="hint_sql">SELECT * FROM t LIMIT 20;</string>
+    <string name="hint_redis">GET some_key</string>
+    <string name="toast_unsupported">这个格式不支持 SQL</string>
+    <string name="console_unsupported_line">-- %1$s 不支持 SQL 语句，请在左侧对象列表里直接打开表</string>
+    <string name="target_redis">%1$s · 直接输入 Redis 命令</string>
+    <string name="target_unsupported">%1$s · 该格式不支持 SQL</string>
+    <string name="stat_running">运行中…</string>
+    <string name="stat_statements">%1$d 条语句</string>
+    <string name="result_ok">ok</string>
+    <string name="result_empty">(0 rows)</string>
+    <string name="result_rows">(%1$d rows)</string>
+
+    <!-- 脚本编辑器 / script editor -->
+    <string name="action_execute">执行</string>
+    <string name="script_hint">按分号切分语句执行，跳过注释和字符串里的分号</string>
+    <string name="script_pick_target">执行到哪个库？</string>
+    <string name="script_dialog_title">执行脚本</string>
+    <string name="script_confirm_write">其中有写操作：\n%1$s\n\n确认执行？</string>
+    <string name="script_no_session">先打开一个数据库（本地或远程）再执行脚本</string>
+    <string name="script_no_statements">脚本里没有语句</string>
+    <string name="script_loaded">已载入 · %1$d 字符</string>
+    <string name="script_running">执行中…</string>
+    <string name="script_done">完成 · 成功 %1$d / 失败 %2$d</string>
+    <string name="script_partial_fail">部分语句失败</string>
+    <string name="script_default_name">脚本</string>
+    <string name="script_target">目标：%1$s</string>
+    <string name="script_statement_count">语句数：%1$d</string>
+
+    <!-- 错误描述 / error hints -->
+    <string name="err_refused">端口拒绝连接，检查地址、端口和防火墙\n\n%1$s</string>
+    <string name="err_timeout">连接超时，服务器不可达\n\n%1$s</string>
+    <string name="err_auth">账号或密码不正确\n\n%1$s</string>
+    <string name="err_unknown_db">库不存在，检查库名\n\n%1$s</string>
+    <string name="err_no_table">表不存在\n\n%1$s</string>
+    <string name="err_dns">主机名解析失败，改用 IP 试试\n\n%1$s</string>
+    <string name="err_driver">驱动没打包进 APK\n\n%1$s</string>
+    <string name="err_unknown_format">认不出这个文件：%1$s\n支持 .db / .sqlite / .sqlite3 / .mdb / .accdb / .dbf / .csv / .tsv</string>
+
+    <string name="toast_columns_missing">列信息缺失</string>
+    <string name="action_got_it">知道了</string>
+    <string name="title_save_failed">保存失败</string>
+    <string name="title_read_failed">读取失败</string>
+    <string name="err_not_writable">目标不可写（可能缺少写入授权）</string>
+    <string name="err_empty_or_unreadable">空文件或读不出来</string>
+    <string name="script_write_count">其中写操作：%1$d 条</string>
+    <string name="script_readonly_note">该会话只读，写操作会被拒绝。</string>
+    <string name="script_stmt_failed">第 %1$d 条：%2$s</string>
+    <string name="script_all_done">全部执行完成</string>
+    <string name="sql_preview">SELECT * FROM %1$s LIMIT 20;</string>
+    <string name="script_confirm_ask">确认执行？</string>
+</resources>
